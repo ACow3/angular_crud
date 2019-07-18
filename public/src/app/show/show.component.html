@@ -1,0 +1,5 @@
+<h1>{{ task.title }}</h1>
+<h1>{{ task.description }}</h1>
+<h1>{{ task.completed }}</h1>
+
+<button class="btn btn-success" [routerLink]="['/edit/'+task._id]">Edit</button>

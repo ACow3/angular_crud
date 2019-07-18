@@ -1,0 +1,14 @@
+<button class="btn btn-info float-right" [routerLink]="['/new']">Create New Task</button>
+<h1>All Tasks</h1>
+<div class="allTasks" *ngFor="let task of tasks">
+    <div class="row mb-2">
+        <div class="col">{{ task._id }}</div>
+        <div class="col">{{ task.title }}</div>
+        <div class="col">{{ task.description }}</div>
+        <div class="col">{{ task.completed }}</div>
+        <div class="col">
+            <button class="btn btn-warning mr-2" [routerLink]="['/show/'+task._id]">Show</button>
+            <button class="btn btn-danger" (click)="deleteOneTask(task._id)">Delete</button>
+        </div>
+    </div>
+</div>

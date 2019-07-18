@@ -1,0 +1,12 @@
+<h1>Edit Task</h1>
+
+{{ task | json }}
+
+<form (submit)="onSubmit()">
+
+  <input type="text" placeholder="Title" class="form-control col-6 mb-2" name="task.title" [(ngModel)]="task.title" />
+  <input type="text" placeholder="Description" class="form-control col-6 mb-2" name="task.description" [(ngModel)]="task.description" />
+  <input type="text" placeholder="Completed" class="form-control col-6 mb-2" name="task.completed" [(ngModel)]="task.completed" />
+  <input type="submit" class="btn btn-warning" value="Update Task" />
+
+</form>

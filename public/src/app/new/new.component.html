@@ -1,0 +1,11 @@
+<div class="h1">New Component</div>
+<form (submit)="onSubmit()">
+
+    <p class="text-danger">{{ taskError.title }}</p>
+    <input type="text" placeholder="Title" class="form-control col-6 mb-2" name="newTask.title" [(ngModel)]="newTask.title" />
+    <p class="text-danger">{{ taskError.description }}</p>
+    <input type="text" placeholder="Description" class="form-control col-6 mb-2" name="newTask.description" [(ngModel)]="newTask.description" />
+    <p class="text-danger">{{ taskError.completed }}</p>
+    <input type="text" placeholder="Completed" class="form-control col-6 mb-2" name="newTask.completed" [(ngModel)]="newTask.completed" />
+    <input type="submit" class="btn btn-success" value="Create Task" />
+</form>
